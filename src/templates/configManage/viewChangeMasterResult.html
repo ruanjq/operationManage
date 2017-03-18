@@ -1,0 +1,55 @@
+<link rel="stylesheet" type="text/css" href="dist/styleSheet/configPage-a82382dd70.css">
+<section class="list-config">
+    <h2 class="view-title">
+        <span class="crumb-wrap">
+            <a href="javascript:void(0);">配置管理</a> / 
+            <span class="current-crumb">主库切换记录</span>
+        </span>
+
+    </h2>
+    <div class="view-panel">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered table-hover config-list-table">
+                    <thead>
+                    <tr>
+                        <th>
+                            主库标识
+                        </th>
+                        <th>
+                            操作人
+                        </th>
+                        <th>
+                            操作状态
+                        </th>
+                        <th>
+                            操作时间
+                        </th>
+                        <th>
+                            更新时间
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody id="viewMasterOperateTbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="dist/js/pages/configPage-2f7199b942.js"></script>
+<script type="text/html" id="viewMasterOperateTable">
+    <tr>
+        <td>{{d.code}}</td>
+        <td>{{d.admin_name}}</td>
+        <td>{{d.status_str}}</td>
+        <td>{{d.add_time}}</td>
+        <td>{{d.up_time}}</td>
+    </tr>
+    <tr>
+       <td colspan="5">切换日志</td>
+    </tr>
+    <tr>
+        <td colspan="5" class="text-align-l">{{d.info}}</td>
+    </tr>
+</script>

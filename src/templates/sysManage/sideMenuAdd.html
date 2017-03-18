@@ -1,0 +1,89 @@
+<link rel="stylesheet" type="text/css" href="dist/styleSheet/sysManage-eb20605731.css">
+<section class="list-config">
+    <h2 class="view-title">
+        <a href="javascript:void(0)" class="js_view_link" data-view="sideMenuList">菜单列表</a> / 
+        <span class="current-crumb">后台菜单添加</span></h2>
+    <div class="view-panel panel panel-default">
+        <div class="container-fluid panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal add-menu-form" id="js_add_menu_form" role="form" data-toggle="validator">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="menu_mod">模块名称</label>
+                                <div class="col-md-2">
+                                    <select id="menu_mod" name="menu_mod" class="form-control">
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Select Basic -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="parent_id">上级菜单</label>
+                                <div class="col-md-2">
+                                    <select id="parent_id" name="parent_id" class="form-control">
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="menu_name"><i class="text text-danger label-require">*</i>菜单名称</label>
+                                <div class="col-md-3">
+                                    <input id="menu_name" name="menu_name" type="text" placeholder="输入菜单名称" class="form-control input-md" required="" data-error="请输入菜单名称">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="menu_ctl"><i class="text text-danger label-require">*</i>控制器</label>
+                                <div class="col-md-3">
+                                    <input id="menu_ctl" name="menu_ctl" type="text" placeholder="默认填写字符 - " value="-" class="form-control input-md" required="" data-error="请输入控制器名称">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="menu_act"><i class="text text-danger label-require">*</i>方法名</label>
+                                <div class="col-md-2">
+                                    <input id="menu_act" name="menu_act" type="text" placeholder="" class="form-control input-md" required="" data-error="请输入方法名称">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="template_url"><i class="text text-danger label-require">*</i>模板路径</label>
+                                <div class="col-md-8">
+                                    <input id="template_url" name="template_url" type="text" placeholder="请输入html模板页面路径" value="" class="form-control input-md">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="is_state">是否显示</label>
+                                <div class="col-md-10">
+                                    <label class="radio-inline" for="is_state-1">
+                                            <input type="radio" name="is_state" id="is_state_1" value="1" checked> 是
+                                    </label>
+                                    <label class="radio-inline" for="is_state-0">
+                                            <input type="radio" name="is_state" id="is_state_0" value="0" > 否
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="order_num">排序</label>
+                                <div class="col-md-1">
+                                    <input id="order_num" name="order_num" type="number" placeholder="" class="form-control input-md">
+                                </div>
+                            </div>
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="button1id"></label>
+                                <div class="col-md-3">
+                                    <button id="button1id" name="button1id" type="submit" class="btn btn-primary js_add_menu_btn" data-loading-text="<i class='fa fa-spinner fa-spin '></i> 正在保存...">保 &nbsp; 存</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="dist/js/pages/sysManagePage-16c73df7ab.js"></script>

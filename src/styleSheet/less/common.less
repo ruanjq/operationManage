@@ -1,0 +1,221 @@
+@import "../tools/reset.less";
+@import "../tools/animate.less";
+@import "./sprite.less";
+@import "../tools/mixins.less";
+
+
+html,body,#app{height: 100%;}
+
+body{
+	font-family: '微软雅黑'; overflow-y: hidden;
+	a{
+		color:@color-000;
+		&:hover{text-decoration: none;color:inherit;}
+		&:focus{outline: none;text-decoration:none;}
+	}
+}
+
+.view-animated{
+	animation: 0.25s viewSlideInUp both linear;
+}
+
+
+.float-r{
+	float: right;
+}
+.float-l{
+	float: left;
+}
+.inline-block{display: inline-block;}
+.margin-10{
+	margin:10px;
+}
+.text-align-r{
+	text-align: right;
+}
+.text-align-l{
+	text-align: left;
+}
+.padding-right-10{
+	padding-right: 10px;
+}
+.padding-left-10{
+	padding-left: 10px;
+}
+.margin-horizontal-10{
+	margin-left: 10px;margin-right: 10px;
+}
+.margin-vertical-10{
+	margin-bottom: 10px; margin-top: 10px;
+}
+
+.margin-right-20{
+	margin-right: 20px;
+} 
+.margin-vertical-5{
+	margin-bottom: 5px; margin-top: 5px;
+}
+.margin-top-5{
+	margin-top: 5px;
+}
+
+.bg-eee{
+	background: #eee;
+}
+
+.text.text-underline.option-editor-btn{text-decoration: underline; display: inline-block; margin-top:-4px; vertical-align: middle; margin-left: 5px; font-size: 12px;}
+
+.font-size-12{font-size: 12px;}
+.font-size-14{font-size: 14px;}
+.panel{border-radius: 0;}
+
+.label-require{ display: inline-block; margin-right: 1px; font-size: 12px;}
+
+.logo-wrap{text-align: center; height: 90px; background:#2A3E61; line-height: 90px; white-space: nowrap;}
+.logo-title{color:#FFF;  font-size: 24px; letter-spacing: 2px; display: inline-block;}
+.nav-wrap{flex:1; background: #FFF;box-shadow: 0 -2px 6px 0 rgba(232, 231, 231, 0.79) inset; }
+.nav-menu-toggle-btn{display: inline-block;transition: transform 0.5s;
+	&.enter-toggle{
+		transform: rotate(180deg);
+	}
+	&.leave-toggle{
+		transform: rotate(0deg);
+	}
+	&:hover{
+		i{color:@app-theme-color;}
+	}
+}
+.nav-menu-toggle{display: inline-block;
+	height: 90px; text-align: center; line-height: 90px; font-size: 26px;
+	i{color:#7F8082; display: inline-block; margin-left: 50px; margin-right: 50px;};
+}
+.user-info-wrap{
+	float: right; height: 30px;  margin-right: 25px; margin-top: 34px; font-size: 14px; color:#9FA0A2;
+	.user-name{display: inline-block;padding-left: 24px; padding-right: 24px;position: relative;
+		&:after{
+			content: '|';color: #d6d6d6;display: block;position: absolute;right: 0;top: -1px;
+		}
+		&:hover{
+			color:@app-theme-color;text-decoration: underline;
+		}
+	}
+	.login-out{display: inline-block; padding-left: 25px; padding-right: 25px;
+		&:hover{
+			i{color:@app-theme-color;}
+		}
+		i{color:#9FA0A2;}
+	}
+}
+
+.body_content{ display: flex;
+	height: calc(~'100%');
+	.right-view{flex:1;position: relative;}
+	.side_menu{
+		position: relative; width: 220px; background: #19283F; height: 100%; min-width: 220px;
+		overflow-y: hidden;
+		.menu-wrap{padding-top: 30px; padding-bottom: 30px;
+			height: calc(~'-90px + 100%'); overflow-y: scroll;
+			//  定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸
+		    &::-webkit-scrollbar{
+		        width: 4px;height: 15px;background-color: #999;border-radius: 3px;
+		      }
+		   	//  定义滚动条轨道 内阴影+圆角
+		    &::-webkit-scrollbar-track{
+		    	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);border-radius: 3px;background-color: #19283F;
+	    	}
+		       
+		    //定义滑块 内阴影+圆角
+		    &::-webkit-scrollbar-thumb{
+		    	border-radius: 2px;
+	          	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	          	background-color: #19283F;
+		    } 
+		}
+		.menu-item{  
+			&.open-menu{
+				.sub_menu_wrap{display: block;}
+			}
+			.sub_menu_wrap{display: none;}
+			.menu-name{ font-size: 16px; color:#FFF;padding-left: 95px; height: 45px; line-height: 45px; display: block;position: relative; white-space: nowrap;
+				&:hover{background: #22324E}
+				.menu-icon{font-size: 24px; position: absolute; left: 50px; top: 50%;transform: translateY(-50%)}
+				.toggle-icon{position: absolute; right: 10px;top: 50%;transform: translateY(-50%) }
+			}
+			.sub-menu-item{ height: 40px; line-height: 40px;position: relative;overflow:hidden;
+				&.active{
+					background: #22324E;
+					.sub-menu-name{color:#FFF;
+						i{display: block;}
+					}
+				}
+				&:hover{background: #22324E;
+					.sub-menu-name{color:#FFF;}
+				}
+				.sub-menu-name{color:#3b4e6a; font-size: 14px; display: block; white-space: nowrap;overflow-y: hidden;text-overflow: ellipsis;
+					 padding-left: 102px; 
+					i{display: none;position: absolute;position: absolute; left: 90px; top: 50%;transform: translateY(-50%) scale(0.8); font-size: 12px;}
+				}
+			}
+		}
+	}
+	.view_content{ flex:1; height: calc(~'-90px + 100%'); min-width: 1146px;
+		background: #F4F7F9; overflow-y: scroll;
+		& > section{
+			padding-top: 36px;padding-left: 50px; padding-right: 50px;padding-bottom: 50px;
+		}
+	}
+	.view-title{
+		color:#333; font-size: 20px; height: 36px; line-height: 36px; margin-bottom: 25px;
+		a.js_view_link:hover{
+			color:#53B6EB;text-decoration: underline;
+		}
+		.current-crumb{
+			color:#999;
+		}
+	}
+
+	.view-panel{
+		display: block; 
+		// box-shadow: 0 0 5px 0px #d6d6d6;
+	}
+}
+
+
+#footer{
+	position: absolute; width: 100%;height: 50px; border-top:1px solid #ddd;right: 0; z-index: 2;bottom: 0; background: #FFF;
+	p{line-height: 50px; padding-left: 50px; text-align: right;padding-right: 65px; }
+	.go-top{display: inline-block; color: #333; margin-left: 15px;
+		&:hover{color:@app-theme-color;}
+	}
+}
+form.form-horizontal .with-errors{ font-size: 14px;}
+@media (min-width: 768px){
+	form.form-horizontal .control-label{
+		text-align: right; max-width: 115px;
+	}
+	form.form-horizontal .form-group{margin-bottom: 30px;}
+}
+
+table.table-bordered{
+
+	background: #FFF;
+	th{white-space: nowrap;}
+	th,tr{text-align: center;}
+	td{vertical-align: middle;}
+	tbody{
+		td{vertical-align: middle;}
+	}
+}
+
+@keyframes viewSlideInUp {
+  from {
+    transform: translate3d(0, 25%, 0);
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

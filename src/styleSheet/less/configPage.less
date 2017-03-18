@@ -1,0 +1,42 @@
+@import "../tools/mixins.less";
+
+.home-page{ 
+	.app-list-wrap{
+		overflow-y: hidden; margin-left: -25px; margin-right: -25px;
+		.app-item{width: 492px; height: 180px; float: left; box-shadow: 0 0 3px 0px #d6d6d6 inset; margin-left: 25px; margin-right: 25px;
+			text-align: center; display: flex;align-items: center;justify-content: center; margin-bottom: 20px;overflow-y: hidden;
+			img{ max-width: 492px;}
+			&.add-icon{
+				text-align: center; line-height: 180px;
+				a{
+					&:hover{
+						color:@app-theme-color;
+					}
+					color:#D8DEE1; display: inline-block;font-size: 100px;
+				}
+			}
+		}
+
+	}
+}
+
+.add-config{
+	// padding-top: 36px;padding-left: 50px; padding-right: 50px;
+}
+
+.list-config{
+	.config-list-table{
+		background: #FFF;
+		th,tr{text-align: center;}
+		td{vertical-align: middle;}
+	}
+}
+.add-ip-wrap{ margin-left: -12px;margin-top: 8px;}
+
+.panel-form{
+	padding-top: 10px; padding-bottom: 15px;border:1px #eee solid;
+	margin-bottom: 10px; position: relative;
+	label{ font-weight: 100;}
+	.form-group{margin-bottom: 10px;}
+	
+}

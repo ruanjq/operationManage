@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="运维平台管理系统" />
+    <meta name="keywords" content="运维平台,CMS管理系统" />
+    <title>运维平台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="src/js/libs/bootstrap-v3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/js/libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/js/libs/layer-v3.0.2/skin/default/layer.css">
+    <link rel="stylesheet" type="text/css" href="dist/styleSheet/common-0e4419193d.css">
+    <link rel="stylesheet" type="text/css" href="src/js/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <script type="text/javascript" src="src/js/libs/jquery-v3.1.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="src/js/libs/bootstrap-v3.3.7/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="src/js/libs/bootstrap-datetimepicker/js/moment.min.js"></script>
+    <script type="text/javascript" src="src/js/libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="src/js/libs/bootstrap-datetimepicker/js/zh-cn.js"></script>
+    <script type="text/javascript" src="src/js/libs/bootstrap-v3.3.7/js/validator.js"></script>
+    <script type="text/javascript" src="src/js/libs/layer-v3.0.2/layer.js"></script>
+    <script type="text/javascript" src="src/js/libs/laytpl.js"></script>
+    <script type="text/javascript" src="src/js/libs/jquery.bootpag.min.js"></script>
+</head>
+
+<body>
+    <section id="app">
+        <header id="head" class="app-head">
+            
+        </header>
+        <section id="body_content" class="body_content">
+            <aside id="side_menu" class="side_menu">
+                <div class="logo-wrap">
+                    <h1 class="logo-title">运维管理系统</h1>
+                </div>
+                <ul class="menu-wrap js_menu_wrap" data-mcs-theme="rounded" id="js_menu_wrap">
+                    
+                </ul>
+            </aside>
+
+            <!-- 页面内容，所有页面在该标签内切换 -->
+            <section class="right-view">
+                <div class="nav-wrap">
+                    <div class="nav-menu-toggle">
+                        <a class="nav-menu-toggle-btn js_nav_menu_toggle" href="javascript:void(0)">
+                            <i class="glyphicon glyphicon-menu-hamburger"></i>
+                        </a>
+                    </div>
+                    <div class="user-info-wrap">
+                        <span class="user-name js_user_name">你好,***</span>
+                        <a class="login-out js_login_out" href="javascript:void(0);" title="退出运维管理系统"><i class="glyphicon glyphicon-off"></i></a>
+                    </div>
+                </div>
+                <article id="view_content" class="view_content js_view_content">
+                </article>
+                <footer id="footer">
+                    <p>
+                        <span>&copy; ~~运维管理系统 2017</span>
+                        <a href="javascript:void(0);" class="go-top js_go_top"><i class="glyphicon glyphicon-arrow-up"></i></a>
+                    </p>
+                </footer>
+            </section>
+        </section>
+    </section>
+
+    <script type="text/javascript" src="dist/js/pages/common-366001b7a0.js"></script>
+    
+
+    <script type="text/javascript/html" id="sideMenuTpl">
+        {{# for(var i = 0;i < d.menuData.length; i++){ }}
+        <li class="menu-item js_menu_item">
+            <a class="menu-name" href="javascript:void(0);">
+                <i class="menu-icon glyphicon {{d.menuData[i].menu_icon || 'glyphicon-cog'}}" aria-hidden="true"></i>{{d.menuData[i].menu_name}}
+                <i class="toggle-icon glyphicon glyphicon-menu-left" aria-hidden="true"></i>
+            </a>
+            <ul class="js_sub_menu_wrap sub_menu_wrap">
+                {{# for(var j = 0; j < d.menuData[i]._child.length; j++){ }}
+                    {{#  if(d.menuData[i]._child[j].is_state == 1){ }}
+                        <li class="sub-menu-item {{#  if(d.menuData[i]._child[j].menu_act == d.currentMenu){ }} active {{#  } }}">
+                            <a class="sub-menu-name js_view_link" data-view="{{d.menuData[i]._child[j].menu_act}}" href="javascript:void(0);">
+                                <i class="glyphicon glyphicon-triangle-right" aria-hidden="true"></i>{{d.menuData[i]._child[j].menu_name}}
+                            </a>
+                        </li>
+                    {{#  } }}
+                
+               {{# } }}
+            </ul>
+        </li>
+        {{# } }}
+    </script>
+</body>
+
+</html>

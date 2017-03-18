@@ -1,0 +1,79 @@
+<link rel="stylesheet" type="text/css" href="dist/styleSheet/configPage-a82382dd70.css">
+<section class="add-config">
+    <h2 class="view-title">
+        <a href="javascript:void(0);" class="js_view_link" data-view="listConfig">配置列表</a> / 
+        <span class="current-crumb">添加配置</span>
+    </h2>
+    <div class="view-panel panel panel-primary">
+        <div class="container-fluid panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal add-config-form" id="js_add_config_form"  role="form" data-toggle="validator">
+                        <fieldset>
+                            <!-- Select Basic -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="website_list">项目选择</label>
+                                <div class="col-md-3">
+                                    <select id="website_list" name="website_code" class="form-control">
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                           
+                            <!-- Multiple radioes (inline) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="service_list">服务</label>
+                                <div class="col-md-10" id="service_list_wrap">
+                                    
+                                </div>
+                            </div>
+
+                            <!-- Multiple radioes (inline) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="application_list">应用程序</label>
+                                <div class="col-md-10" id="application_list_wrap">
+                                    
+                                </div>
+                            </div>
+                            <!-- Multiple radioes (inline) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="all_ip">IP地址</label>
+                                <div class="col-md-10">
+                                    <div id="all_ip_wrap">
+                                   
+                                    </div>
+                                    <p class="add-ip-wrap">
+                                        <button type="button" class="btn btn-link js_add_ip_btn"><span class="text text-success">新增IP地址</span></button>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Multiple radioes (inline) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="mode_list">群集模式</label>
+                                <div class="col-md-10" id="mode_list_wrap">
+                                    
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="url"><i class="text text-danger label-require">*</i>IP域名</label>
+                                <div class="col-md-4">
+                                    <input id="url" name="url" type="text" placeholder="请输入唯一域名" class="form-control input-md" required="">
+                                </div>
+                            </div>
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="button1id"></label>
+                                <div class="col-md-2">
+                                    <button id="button1id" name="button1id" type="submit" class="btn btn-primary btn-block" data-loading-text="<i class='fa fa-spinner fa-spin '></i> 正在保存...">保 存</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</section>
+<script type="text/javascript" src="dist/js/pages/configPage-2f7199b942.js"></script>

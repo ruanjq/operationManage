@@ -1,0 +1,40 @@
+
+
+
+@app-theme-color:#2A3E61;
+@color-000:#000;
+
+.triangle-left(@width,@color:@app-theme-color){
+	width: 0; height: 0;display: inline-block;
+	border-top:@width solid transparent;
+	border-right:@width solid @color;
+	border-bottom:@width solid transparent;
+	border-left:none;
+}
+
+.triangle-right(@width,@color:@app-theme-color){
+	width: 0; height: 0;display: inline-block;
+	border-top:@width solid transparent;
+	border-left:@width solid @color;
+	border-bottom:@width solid transparent;
+	border-right:none;
+}
+
+.triangle-top(@width,@color:@app-theme-color){
+	width: 0; height: 0;display: inline-block;
+	border-right:@width solid transparent;
+	border-bottom:@width solid @color;
+	border-left:@width solid transparent;
+	border-top:none;
+}
+
+.triangle-bottom(@width,@color:@app-theme-color){
+	width: 0; height: 0;display: inline-block;
+	border-right:@width solid transparent;
+	border-top:@width solid @color;
+	border-left:@width solid transparent;
+	border-bottom:none;
+}
+
+
+

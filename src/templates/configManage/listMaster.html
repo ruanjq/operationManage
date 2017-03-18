@@ -1,0 +1,63 @@
+<link rel="stylesheet" type="text/css" href="dist/styleSheet/configPage-a82382dd70.css">
+<section class="list-config">
+    <h2 class="view-title">
+        <span class="crumb-wrap">
+            <a href="javascript:void(0);">配置管理</a> / 
+            <span class="current-crumb">主库列表</span>
+        </span>
+        <span class="float-r inline-block margin-horizontal-10">
+            <button type="button" class="btn btn-default btn-warning js_view_link" data-view="addMysqlMaster"
+                    aria-label="Left Align">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 添加主库配置
+            </button>
+        </span>
+    </h2>
+    <div class="view-panel">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered table-hover config-list-table">
+                    <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            主库标识
+                        </th>
+                        <th>
+                            主库IP
+                        </th>
+                        <th>
+                            操 作
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody id="masterListTbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="dist/js/pages/configPage-2f7199b942.js"></script>
+<script type="text/html" id="masterListTable">
+    {{# for(var i = 0;i< d.length; i++){ }}
+    <tr>
+        <td>{{d[i].id}}</td>
+        <td>{{d[i].code}}</td>
+        <td>{{d[i].master_ip}}</td>
+        <td>
+            <button type="button" aria-label="Left Align" class="btn btn-default btn-primary btn-xs js_change_master"
+                    data-id="{{d[i].id}}">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 切换
+            </button>
+
+            <button type="button" aria-label="Left Align" class="btn btn-default btn-primary btn-xs js_editor_master"
+                    data-id="{{d[i].id}}">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 编辑
+            </button>
+        </td>
+    </tr>
+    {{# } }}
+</script>
+

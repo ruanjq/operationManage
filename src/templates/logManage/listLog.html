@@ -1,0 +1,82 @@
+<link rel="stylesheet" type="text/css" href="dist/styleSheet/configPage-a82382dd70.css">
+<section class="list-service">
+    <h2 class="view-title">
+        <span class="crumb-wrap">
+                <a href="javascript:void(0);">日志管理</a> / 
+                <span class="current-crumb">服务日志</span>
+        </span>
+    </h2>
+    <div class="panel-form">
+            <form class="form-inline" role="form" data-toggle="validator" id="js_log_search_form">
+                <div class="form-group">
+                    <label for="admin_id">操作管理员ID:</label>
+                    <input type="text" class="form-control" name="admin_id" id="admin_id" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="action_table_object_id">操作对象ID:</label>
+                    <input type="text" class="form-control" name="action_table_object_id" id="action_table_object_id" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="start_time">修改时间:</label>
+                    <input type="text" name="start_time"  class="form-control" id="start_time" placeholder="">
+                    <span>到</span>
+                    <input type="text" class="form-control"  name="end_time" id="end_time" placeholder="">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default btn-primary btn-sm">搜 索</button>
+                </div>
+                
+            </form>
+    </div>
+    <div class="view-panel">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered table-hover service-list-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                ID编号
+                            </th>
+                            <th>
+                                操作管理员ID
+                            </th>
+                            <th>
+                                操作管理员用户名
+                            </th>
+                            <th>
+                                修改的对象ID
+                            </th>
+                            <th>
+                                操作详情
+                            </th>
+                            <th>
+                                操作类型
+                            </th>
+                            <th>
+                                操作时间
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="listLogTbody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12">
+                <section id="page_sections" class="text-align-r"></section>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/html" id="listLogTpl">
+    {{# for(var i = 0;i< d.length; i++){ }} <tr>
+        <td>{{d[i].id}}</td>
+        <td>{{d[i].admin_id}}</td>
+        <td>{{d[i].admin_name}}</td>
+        <td>{{d[i].action_table_object_id}}</td>
+        <td>{{d[i].action}}</td>
+        <td ><div class="text text-danger text-align-l font-size-14">{{d[i].detail}}</div></td>
+        <td class="font-size-14">{{dateFormat(d[i].insert_time,'MM/dd/YYYY HH:mm:ss')}}</td>
+        </tr>
+        {{# } }}
+</script>
+<script type="text/javascript" src="dist/js/pages/logManagePage-4b457d4587.js"></script>

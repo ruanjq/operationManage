@@ -1,0 +1,76 @@
+<link rel="stylesheet" type="text/css" href="dist/styleSheet/sysManage-eb20605731.css">
+<section class="list-config">
+    <h2 class="view-title">
+    	<a href="javascript:void(0)" class="js_view_link" data-view="departmentList">部门列表</a> / 
+    	<span class="current-crumb">部门添加</span></h2>
+    <div class="view-panel panel panel-default">
+        <div class="container-fluid panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal add-department-form" id="js_department_form"  role="form" data-toggle="validator">
+                        <fieldset>
+                            <!-- Select Basic -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="parent_id">上级部门</label>
+                                <div class="col-md-2">
+                                    <select id="parent_id" name="parent_id" class="form-control">
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="departmentName"><i class="text text-danger label-require">*</i>部门名称</label>
+                                <div class="col-md-4">
+                                    <input id="departmentName" name="de_name" type="text" placeholder="填写部门名称" class="form-control input-md" required="">
+                                </div>
+                            </div>
+                            <!-- Multiple radioes (inline) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">权限</label>
+                                <div class="col-md-10">
+                                    <div id="powers_list">
+                                        
+                                    </div>
+                                  
+                                </div>
+                            </div>
+
+                            
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="button1id"></label>
+                                <div class="col-md-2">
+                                    <button id="button1id" type="submit" name="button1id" data-loading-text="<i class='fa fa-spinner fa-spin '></i> 正在保存..." class="btn btn-primary btn-block">保 &nbsp; 存</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/html" id="powerTpl">
+<label class="checkbox-inline margin-bottom-10" for="power_item_child_all" id="checkAll">
+    <input type="checkbox" name="powers" id="power_item_child_all" value="all"> <span class="text-danger">全选</span>
+</label>
+{{# for(var i = 0;i < d.length; i++){ }}
+
+    <section class="power_item">
+        <p class="text text-primary"><label class="control-label margin-right-20">{{d[i].menu_name}}:</label></p>
+        <div id="menu_checkbox_wrap">
+            <span>
+                {{# for(var j = 0;j < d[i]._child.length; j++){ }} 
+                <label class="checkbox-inline" for="power_item_child_{{d[i].id}}_{{j}}">
+                    <input type="checkbox" {{#  if( checkedPower.indexOf(d[i]._child[j].id) >= 0 ){ }}checked{{#  } }} name="powers" id="power_item_child_{{d[i].id}}_{{j}}" value="{{d[i]._child[j].id}}"> {{d[i]._child[j].menu_name}}
+                </label>
+                {{# } }}
+            </span>
+            
+        </div>
+    </section>
+{{# } }}
+</script>
+<script type="text/javascript" src="dist/js/pages/sysManagePage-16c73df7ab.js"></script>

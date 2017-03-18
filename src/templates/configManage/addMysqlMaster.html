@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="dist/styleSheet/configPage-a82382dd70.css">
+<section class="add-config">
+    <h2 class="view-title">
+        <a href="javascript:void(0);" class="js_view_link" data-view="listMaster">主库切换</a> /
+        <span class="current-crumb">添加主库配置</span>
+    </h2>
+    <div class="view-panel panel panel-primary">
+        <div class="container-fluid panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal add-config-form" id="js_add_master_form"  role="form" data-toggle="validator">
+                        <fieldset>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="code"><i class="text text-danger label-require">*</i>主库标识</label>
+                                <div class="col-md-4">
+                                    <input id="code" name="code" type="text" placeholder="请输入主库标识" class="form-control input-md" required="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="master_ip"><i class="text text-danger label-require">*</i>主库IP</label>
+                                <div class="col-md-4">
+                                    <input id="master_ip" name="master_ip" type="text" placeholder="请输入主库IP" class="form-control input-md" required="">
+                                </div>
+                            </div>
+
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="button1id"></label>
+                                <div class="col-md-2">
+                                    <button id="button1id" name="button1id" type="submit" class="btn btn-primary" data-loading-text="<i class='fa fa-spinner fa-spin '></i> 正在保存...">保 存</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</section>
+<script type="text/javascript" src="dist/js/pages/configPage-2f7199b942.js"></script>

@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="dist/styleSheet/configPage-a82382dd70.css">
+<section id="home-page" class="home-page">
+    
+    <div class="app-list-wrap" id="js_website_wrap">
+        
+    </div>
+
+  
+</section>
+<script type="text/html" id="webSiteTpl">
+    {{# for(var i = 0;i < d.length; i++){ }}
+        <div class="app-item js_website_item js_website_item_{{d[i].id}}" data-id="{{d[i].id}}">
+            <img src="{{d[i].logo}}" alt="{{d[i].name}}" title="{{d[i].name}}"/>
+        </div>
+    {{# } }}
+    <div class="app-item add-icon">
+        <a class="js_view_link" data-view="addWebsite" title="添加项目" href="javascript:void(0)">+</a>
+    </div>
+</script>
+<script type="text/javascript" src="dist/js/pages/configPage-2f7199b942.js"></script>

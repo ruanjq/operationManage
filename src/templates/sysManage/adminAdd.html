@@ -1,0 +1,62 @@
+<link rel="stylesheet" type="text/css" href="dist/styleSheet/sysManage-eb20605731.css">
+<section class="list-config">
+    <h2 class="view-title">
+    	<a href="javascript:void(0)" class="js_view_link" data-view="adminList">管理员列表</a> / 
+    	<span class="current-crumb">管理员添加</span></h2>
+    <div class="view-panel panel panel-default">
+        <div class="container-fluid panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal add-admin-form" id="js_admin_form"  role="form" data-toggle="validator">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="username"><i class="text text-danger label-require">*</i>用户名</label>
+                                <div class="col-md-2">
+                                    <input id="username" name="username" type="text" placeholder="填写用户名" class="form-control input-md" required="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="realname"><i class="text text-danger label-require">*</i>真实姓名</label>
+                                <div class="col-md-2">
+                                    <input id="realname" name="realname" type="text" placeholder="填写真实姓名" class="form-control input-md" required="">
+                                </div>
+                            </div>
+                            <!-- Select Basic -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="department">部门</label>
+                                <div class="col-md-3">
+                                    <select id="department" name="department_id" class="form-control">
+                                        
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Multiple radioes (inline) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="is_owner">部门负责人</label>
+                                <div class="col-md-10">
+                                    <label class="radio-inline" for="is_owner_0">
+                                        <input type="radio" checked="checked" name="is_owner" id="is_owner_0" value="0" required=""> 否
+                                    </label>
+                                    <label class="radio-inline" for="is_owner_1">
+                                        <input type="radio"  name="is_owner" id="is_owner_1" value="1" required=""> 是
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="button1id"></label>
+                                <div class="col-md-2">
+                                    <button id="button1id" type="submit" name="button1id" class="btn btn-primary">修 &nbsp; 改</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="dist/js/pages/sysManagePage-16c73df7ab.js"></script>
